@@ -58,7 +58,7 @@ var isBad = true
 [The anatomy of Functions in Go](https://medium.com/rungo/the-anatomy-of-functions-in-go-de56c050fe11)
 ```
 func add(x int, y int) int {
-	return x + y
+    return x + y
 }
 ```
 
@@ -76,9 +76,9 @@ func same(x, y int) (int, int){
 ## Named return values
 ```
 func breakNum(num int) (a, b int) {
-	a = num - 1
-	b = num - 2
-	return
+    a = num - 1
+    b = num - 2
+    return
 }
 ```
 
@@ -134,8 +134,8 @@ fmt.Println(*p)
 
 ```
 type ToaDo struct {
-	X int
-	Y int
+    X int
+    Y int
 }
 ```
 

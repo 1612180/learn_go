@@ -168,11 +168,11 @@ func (p People) Show() {
 func main() {
     a := ToaDo{1, 2}
     b := People{"a"}
-	
+    
     var s Shower
     s = a
     s.Show()
-	
+    
     s = b
     s.Show()
 }
