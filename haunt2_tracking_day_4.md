@@ -164,3 +164,59 @@ Muốn sử dụng hàm, biến trong struct, ... của package khác thì tên 
 lower case -> unexported
 upper case -> exported
 ```
+
+## defer
+
+Câu lệnh viết sau ```defer``` thực hiện ngay trước khi hàm kết thúc
+
+Thường được sử dụng ngay sau khi mở file
+```
+f, _ := os.Open("abc.txt")
+defer f.close()
+```
+
+# OOP
+
+[Structs Instead of Classes - OOP in Go](https://golangbot.com/structs-instead-of-classes/)
+
+Đặt obj vào một package khác, viết exported method New để tạo obj, unexported obj để không cho tạo trực tiếp obj
+
+Go lang không hỗ trợ inheritance -> dùng quan hệ chứa nhau để thể hiện. ```struct a``` chứa ```struct b```
+
+Polymorphism thực hiện bằng ```interface```, mỗi interface implement method các khác nhau
+
+# Custom error
+
+Sử dụng ```fmt.Errorf```
+```
+func calcAge(birthYear int) (int, error) {
+    age := 2019 - birthYear
+    if age < 0 {
+        return 0, fmt.Errorf("You are not born yet :)")
+    }
+    return age, nil
+}
+
+func main() {
+    age, err := calcAge(1998)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    fmt.Println("Age", age)
+}
+```
+
+# panic and recover
+
+```panic``` khi xảy ra -> dừng chương trình.
+
+Dùng khi
+- Lỗi khiến chương trình không hoạt động tiếp được (server không tìm được ```port``` để ```bind```)
+- Lỗi lập trình (xử lý trên biến ```nil```)
+
+```panic``` thực hiện ```defer``` rồi mới kết thúc chương trình
+
+Dùng ```recover``` trong ```defer``` dể chương trình chạy tiếp
+
+[More in golangbot](https://golangbot.com/panic-and-recover/)
