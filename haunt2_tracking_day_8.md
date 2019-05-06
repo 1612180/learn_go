@@ -21,10 +21,15 @@ Switch branch
 git checkout testing
 ```
 
-Quick: Create a branch then switch
+__Quick__: Create a branch then switch
 ```
 git branch -b testing2
 ```
 
-[Basic branching and merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+Read [Basic branching and merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
+# Stranger chat app
+
+[Activity diagram](https://github.com/1612180/chat_stranger_doc/tree/master/diagram/activity)
+
+[Timeline](https://github.com/1612180/chat_stranger_doc/blob/master/timeline.md)
